@@ -6,10 +6,10 @@ from langchain_core.tools import tool
 @tool
 def hello_english(name: str) -> str:
     """Greet someone in English.
-    
+
     Args:
         name: The person's name to greet
-        
+
     Returns:
         Greeting in English
     """
@@ -19,23 +19,23 @@ def hello_english(name: str) -> str:
 @tool
 def hello_mandarin(name: str) -> str:
     """Greet someone in Mandarin Chinese.
-    
+
     Args:
         name: The person's name to greet
-        
+
     Returns:
         Greeting in Mandarin (你好)
     """
     return f"你好 {name}"
 
 
-@tool  
+@tool
 def hello_spanish(name: str) -> str:
     """Greet someone in Spanish.
-    
+
     Args:
         name: The person's name to greet
-        
+
     Returns:
         Greeting in Spanish
     """
@@ -45,10 +45,10 @@ def hello_spanish(name: str) -> str:
 @tool
 def hello_hebrew(name: str) -> str:
     """Greet someone in Hebrew.
-    
+
     Args:
         name: The person's name to greet
-        
+
     Returns:
         Greeting in Hebrew (שלום)
     """
@@ -57,9 +57,4 @@ def hello_hebrew(name: str) -> str:
 
 def get_all_tools():
     """Get all greeting tools as a list."""
-    return [
-        hello_english,
-        hello_mandarin,
-        hello_spanish,
-        hello_hebrew
-    ]
+    return [hello_english, hello_mandarin, hello_spanish, hello_hebrew]
